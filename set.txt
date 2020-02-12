@@ -1,0 +1,28 @@
+#intersaction
+l1=list(map(int,input().split()))
+l2=list(map(int,input().split()))
+l = [i for i in l1 if i in l2]
+print(l)
+#union
+
+l1=list(map(int,input().split()))
+l2=list(map(int,input().split()))
+[l1.append(i) for i in l2 if i not in l1]
+print(l1)
+
+#difference
+l1=list(map(int,input().split()))
+l2=list(map(int,input().split()))
+l=[]
+[l.append(i) for i in l1 if i not in l2]
+print(l)
+
+#symmetric difference
+l1=list(map(int,input().split()))
+l2=list(map(int,input().split()))
+l=[]
+[l.append(i) for i in l1 if i in l2]
+[l1.append(i) for i in l2 if i not in l1]
+l3=[]
+[l3.append(i) for i in l1 if i not in l]
+print(l3)
